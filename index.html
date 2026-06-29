@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Value Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Is Your PC Worth It?</h1>
+        <p class="subtitle">Type any component or choose from the quick-filter recommendations.</p>
+        
+        <div class="currency-toggle">
+            <span class="currency-label">Currency:</span>
+            <label class="switch">
+                <input type="checkbox" id="currencyToggle">
+                <span class="slider round"></span>
+            </label>
+            <span id="currencyDisplay" class="currency-name">CAD ($)</span>
+        </div>
+
+        <form id="pcForm">
+            <div class="input-group">
+                <label for="cpuInput">CPU Model</label>
+                <input type="text" id="cpuInput" placeholder="Type any CPU (e.g., Ryzen 5 5500, Core i3 12100F)" autocomplete="off" required>
+                <div id="cpuSuggestions" class="suggestions-box hidden" aria-live="polite"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="gpuInput">GPU Model</label>
+                <input type="text" id="gpuInput" placeholder="Type any GPU (e.g., RTX 3050 8GB, GTX 1650)" autocomplete="off" required>
+                <div id="gpuSuggestions" class="suggestions-box hidden" aria-live="polite"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="moboInput">Motherboard Chipset</label>
+                <input type="text" id="moboInput" placeholder="Type chipset (e.g., B850, B650, H610, A320)" autocomplete="off" required>
+                <div id="moboSuggestions" class="suggestions-box hidden" aria-live="polite"></div>
+            </div>
+
+            <div class="input-group">
+                <label for="ram">RAM Capacity, Generation & Speed</label>
+                <select id="ram" required>
+                    <option value="35">8GB DDR4 2400 MHz</option>
+                    <option value="40">8GB DDR4 2666 MHz</option>
+                    <option value="45">8GB DDR4 3200 MHz</option>
+                    <option value="55">8GB DDR4 3600 MHz</option>
+                    
+                    <option value="70">16GB DDR4 2666 MHz</option>
+                    <option value="90" selected>16GB DDR4 3200 MHz</option>
+                    <option value="100">16GB DDR4 3600 MHz</option>
+                    <option value="110">16GB DDR4 4000 MHz</option>
+                    <option value="100">16GB DDR5 4800 MHz</option>
+                    <option value="110">16GB DDR5 5200 MHz</option>
+                    <option value="120">16GB DDR5 5600 MHz</option>
+                    <option value="130">16GB DDR5 6000 MHz</option>
+                    <option value="150">16GB DDR5 6400 MHz</option>
+
+                    <option value="150">32GB DDR4 2666 MHz</option>
+                    <option value="160">32GB DDR4 3200 MHz</option>
+                    <option value="170">32GB DDR4 3600 MHz</option>
+                    <option value="190">32GB DDR4 4000 MHz</option>
+                    <option value="220">32GB DDR5 4800 MHz</option>
+                    <option value="240">32GB DDR5 5200 MHz</option>
+                    <option value="260">32GB DDR5 5600 MHz</option>
+                    <option value="290">32GB DDR5 6000 MHz</option>
+                    <option value="360">32GB DDR5 6400 MHz</option>
+                    <option value="420">32GB DDR5 7200 MHz</option>
+                    <option value="480">32GB DDR5 8000 MHz</option>
+
+                    <option value="300">64GB DDR4 3200 MHz</option>
+                    <option value="360">64GB DDR4 3600 MHz</option>
+                    <option value="350">64GB DDR5 5200 MHz</option>
+                    <option value="400">64GB DDR5 5600 MHz</option>
+                    <option value="450">64GB DDR5 6000 MHz</option>
+                    <option value="540">64GB DDR5 6400 MHz</option>
+                    <option value="650">64GB DDR5 7200 MHz</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="ssd">Primary SSD Storage</label>
+                <select id="ssd" required>
+                    <option value="75">256GB SATA / NVMe SSD</option>
+                    <option value="125">512GB SATA / NVMe SSD</option>
+                    <option value="250" selected>1TB NVMe M.2 SSD (Gen 3 / Gen 4)</option>
+                    <option value="450">2TB NVMe M.2 SSD (Gen 4 High-Speed)</option>
+                    <option value="650">4TB+ NVMe M.2 SSD Enterprise / Pro</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="psu">Power Supply (PSU)</label>
+                <select id="psu" required>
+                    <option value="55">Under 500W OEM / White Rated</option>
+                    <option value="70">500W - 650W 80+ Bronze</option>
+                    <option value="100" selected>750W - 850W 80+ Gold Modular</option>
+                    <option value="130">1000W+ 80+ Gold / Platinum</option>
+                    <option value="180">1200W - 1600W Premium ATX 3.0 / PCIe 5</option>
+                </select>
+            </div>
+
+           <div class="input-group">
+                <label for="price" id="priceLabel">Price Paid ($ CAD)</label>
+                <input type="number" id="price" placeholder="e.g., 650" min="1" required>
+            </div>
+
+            <button type="submit" id="checkBtn">Calculate Value</button>
+            
+            <button type="button" id="resetBtn">Clear Specs</button>
+        </form>
+
+        <div id="resultCard" class="result-card hidden">
+            <h2>Verdict</h2>
+            <div id="verdictText" class="verdict"></div>
+            <p id="detailsText"></p>
+            
+            <div id="affiliateContainer"></div>
+        </div>
+
+        <div class="app-footer">
+            <p class="data-credit">
+                Baselines calculated using aggregated <strong>eBay Sold Listings</strong> (used market) and <strong>Amazon</strong> (new market standard) trends.
+            </p>
+            <p class="legal-disclaimer">
+                <em>Disclaimer: This tool provides market estimations for educational purposes only. Valuations do not guarantee real-world component health. Buy used hardware at your own risk.</em>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
