@@ -42,7 +42,9 @@ const gpuDatabase = [
     { name: "Nvidia GeForce RTX 2060 Super", value: 200 }, { name: "Nvidia GeForce RTX 2060", value: 180 },
     { name: "Nvidia GeForce GTX 1660 Super", value: 140 }, { name: "Nvidia GeForce GTX 1650 Super", value: 100 },
     { name: "Nvidia GeForce GTX 1650", value: 100 },       { name: "Nvidia GeForce GTX 1060 6GB", value: 75 },
-    { name: "Nvidia GeForce GTX 1050 Ti", value: 60 },
+    { name: "Nvidia GeForce GTX 1050 Ti", value: 60 },     { name: "Nvidia GeForce RTX 5060 8GB", value: 400 },
+    { name: "Nvidia GeForce RTX 5060 Ti 8GB", value: 600 }, { name: "Nvidia GeForce RTX 5060 Ti 16GB", value: 800 },
+    { name: "Nvidia GeForce RTX 5050 8GB", value: 300 },
    // --- AMD Radeon RX 9000 Series (RDNA 4 additions) ---
     { name: "AMD Radeon RX 9070 XT", value: 900 },
     { name: "AMD Radeon RX 9070", value: 825 },
