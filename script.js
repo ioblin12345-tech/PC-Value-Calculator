@@ -54,7 +54,7 @@ const gpuDatabase = [
     { name: "Nvidia GeForce RTX 4060", value: 400 },   { name: "Nvidia GeForce RTX 3090 Ti", value: 2000 },
     { name: "Nvidia GeForce RTX 3080 Ti", value: 650 }, { name: "Nvidia GeForce RTX 3080 10GB", value: 600 },
     { name: "Nvidia GeForce RTX 3070 Ti", value: 400 }, { name: "Nvidia GeForce RTX 3070", value: 325 },
-    { name: "Nvidia GeForce RTX 3060 Ti", value: 300 }, { name: "Nvidia GeForce RTX 3060 12GB", value: 400 },
+    { name: "Nvidia GeForce RTX 3060 Ti", value: 300 }, { name: "Nvidia GeForce RTX 3060 12GB", value: 350 },
     // RTX 3050 & Entry-Level Additions
     { name: "Nvidia GeForce RTX 3050 8GB", value: 250 }, { name: "Nvidia GeForce RTX 3050 6GB", value: 250 },
     { name: "Nvidia GeForce RTX 2060 Super", value: 200 }, { name: "Nvidia GeForce RTX 2060", value: 180 },
