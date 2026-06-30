@@ -25,7 +25,7 @@ const cpuDatabase = [
     // Ryzen 3 Budgets
     { name: "AMD Ryzen 3 4100", value: 75 },     { name: "AMD Ryzen 3 3300X", value: 70 },
     { name: "AMD Ryzen 3 3100", value: 50 },     { name: "AMD Ryzen 3 3200G", value: 60 },
-    { name: "AMD Ryzen 3 2200G", value: 30 },    { name: "AMD Ryzen 3 1200", value: 20 }
+    { name: "AMD Ryzen 3 2200G", value: 30 },    { name: "AMD Ryzen 3 1200", value: 20 },
     // Intel Older High / Mid Tier Legacy
     { name: "Intel Core i9 9900K", value: 250 },  { name: "Intel Core i7 10700K", value: 250 },
     { name: "Intel Core i7 9700K", value: 150 },  { name: "Intel Core i7 8700K", value: 100 },
