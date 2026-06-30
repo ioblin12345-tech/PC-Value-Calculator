@@ -242,11 +242,11 @@ document.getElementById('pcForm').addEventListener('submit', function(e) {
     let verdictClass = "";
     let details = "";
 
-    if (pricePaid <= estimatedFairPrice * 0.85) {
+    if (pricePaid <= estimatedFairPrice * 0.88) {
         verdict = "Absolute Steal! 🎉";
         verdictClass = "great-deal";
         details = `An estimated fair market price for these specs is around ${currencyTag} $${estimatedFairPrice}. You saved significantly under fair value matrix standards.`;
-    } else if (pricePaid <= estimatedFairPrice * 1.07) {
+    } else if (pricePaid <= estimatedFairPrice * 1.11) {
         verdict = "Fair Price 👍";
         verdictClass = "fair-deal";
         details = `You paid right around what this hardware configuration is valued on the market (Estimated: ${currencyTag} $${estimatedFairPrice}). Great, safe buy.`;
