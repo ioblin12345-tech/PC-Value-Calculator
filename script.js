@@ -51,7 +51,7 @@ const gpuDatabase = [
     { name: "Nvidia GeForce RTX 5070 Ti", value: 1400 }, { name: "Nvidia GeForce RTX 5070", value: 850 },
     { name: "Nvidia GeForce RTX 4090", value: 3100 }, { name: "Nvidia GeForce RTX 4080 Super", value: 1350 },
     { name: "Nvidia GeForce RTX 4070 Super", value: 900 }, { name: "Nvidia GeForce RTX 4060 Ti 16GB", value: 500 },
-    { name: "Nvidia GeForce RTX 4060", value: 400 },   { name: "Nvidia GeForce RTX 3090 Ti", value: 2000 },
+    { name: "Nvidia GeForce RTX 4060", value: 375 },   { name: "Nvidia GeForce RTX 3090 Ti", value: 2000 },
     { name: "Nvidia GeForce RTX 3080 Ti", value: 650 }, { name: "Nvidia GeForce RTX 3080 10GB", value: 600 },
     { name: "Nvidia GeForce RTX 3070 Ti", value: 400 }, { name: "Nvidia GeForce RTX 3070", value: 325 },
     { name: "Nvidia GeForce RTX 3060 Ti", value: 300 }, { name: "Nvidia GeForce RTX 3060 12GB", value: 350 },
