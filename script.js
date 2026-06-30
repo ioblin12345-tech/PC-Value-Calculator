@@ -316,11 +316,11 @@ document.getElementById('pcForm').addEventListener('submit', function(e) {
     let verdictClass = "";
     let details = "";
 
-    if (pricePaid <= estimatedFairPrice * 0.88) {
+    if (pricePaid <= estimatedFairPrice * 0.90) {
         verdict = "Absolute Steal!";
         verdictClass = "great-deal";
         details = `An estimated fair market price for these specs is around <strong>${currencyTag} $${estimatedFairPrice}</strong>. You saved significantly under fair value matrix standards.`;
-    } else if (pricePaid <= estimatedFairPrice * 1.12) {
+    } else if (pricePaid <= estimatedFairPrice * 1.05) {
         verdict = "Fair Price";
         verdictClass = "fair-deal";
         details = `You paid right around what this hardware configuration is valued on the market (Estimated: <strong>${currencyTag} $${estimatedFairPrice}</strong>). Great, safe buy.`;
@@ -373,9 +373,9 @@ document.getElementById('pcForm').addEventListener('submit', function(e) {
         amazonBtn.className = "amazon-btn";
 
         if (verdictClass === "bad-deal") {
-            amazonBtn.innerHTML = "Build it New on Amazon for Less";
+            amazonBtn.innerHTML = "Get a Better Deal on AMAZON";
         } else {
-            amazonBtn.innerHTML = "View Upgrades on Amazon";
+            amazonBtn.innerHTML = "Upgrade with AMAZON";
         }
 
         affiliateContainer.appendChild(amazonBtn);
