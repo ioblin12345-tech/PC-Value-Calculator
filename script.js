@@ -26,6 +26,24 @@ const cpuDatabase = [
     { name: "AMD Ryzen 3 4100", value: 75 },     { name: "AMD Ryzen 3 3300X", value: 70 },
     { name: "AMD Ryzen 3 3100", value: 50 },     { name: "AMD Ryzen 3 3200G", value: 60 },
     { name: "AMD Ryzen 3 2200G", value: 30 },    { name: "AMD Ryzen 3 1200", value: 20 }
+    // Intel Older High / Mid Tier Legacy
+    { name: "Intel Core i9 9900K", value: 250 },  { name: "Intel Core i7 10700K", value: 250 },
+    { name: "Intel Core i7 9700K", value: 150 },  { name: "Intel Core i7 8700K", value: 100 },
+    { name: "Intel Core i7 7700K", value: 100 },   { name: "Intel Core i7 6700K", value: 65 },
+    { name: "Intel Core i7 4790K", value: 75 },   { name: "Intel Core i7 4770K", value: 40 },
+    // Intel Older Budget Legacy
+    { name: "Intel Core i5 9400F", value: 60 },   { name: "Intel Core i5 8400", value: 50 },
+    { name: "Intel Core i5 7400", value: 30 },    { name: "Intel Core i5 6400", value: 20 },
+    { name: "Intel Core i5 4590", value: 20 },    { name: "Intel Core i3 9100F", value: 20 },
+    { name: "Intel Core i3 8100", value: 40 },    { name: "Intel Core i3 6100", value: 10 },
+
+    // AMD Older Zen 3 / Zen 2 / Zen+ Legacies
+    { name: "AMD Ryzen 9 3950X", value: 250 },    { name: "AMD Ryzen 9 3900X", value: 175 },
+    { name: "AMD Ryzen 7 5700X", value: 200 },    { name: "AMD Ryzen 7 3800X", value: 135 },
+    { name: "AMD Ryzen 7 3700X", value: 115 },     { name: "AMD Ryzen 7 2700X", value: 85 },
+    { name: "AMD Ryzen 7 1700X", value: 55 },     { name: "AMD Ryzen 5 3600X", value: 110 },
+    { name: "AMD Ryzen 5 2600X", value: 65 },     { name: "AMD Ryzen 5 1600AF", value: 40 },
+    { name: "AMD Ryzen 5 1600", value: 30 },      { name: "AMD Ryzen 5 1400", value: 20 }
 ];
 
 const gpuDatabase = [
